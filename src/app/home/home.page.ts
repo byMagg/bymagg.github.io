@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
@@ -7,7 +7,8 @@ import { IonicModule } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
   standalone: true,
   imports: [IonicModule],
+  encapsulation: ViewEncapsulation.None
 })
 export class HomePage {
-  constructor() {}
+  constructor() { }
 }

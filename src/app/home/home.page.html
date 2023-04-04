@@ -1,8 +1,27 @@
 <ion-content [fullscreen]="true">
+  <ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-button>
+          1. About
+        </ion-button>
+        <ion-button>
+          2. Experience
+        </ion-button>
+        <ion-button>
+          3. Contact
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
   <div id="container">
-    <h1 id="name">Hi, I'm Daniel Barroso</h1>
-    <strong>Computer Engineer</strong>
-    <p>Start with Ionic</p>
+    <div id="main-text">
+      <h1>Hi, my name is</h1>
+      <h2 id="name">Daniel Barroso.</h2>
+      <h3>Computer Engineer.</h3>
+      <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+    </div>
     <div class="arrow bounce">
       <ion-icon name="chevron-down" size="large" color="primary"></ion-icon>
     </div>
@@ -11,4 +30,12 @@
   <div style="height: 1000px;">
 
   </div>
+
 </ion-content>
+<div id="links">
+  <ion-button><ion-icon name="home"></ion-icon></ion-button>
+  <ion-button><ion-icon name="home"></ion-icon></ion-button>
+  <ion-button><ion-icon name="home"></ion-icon></ion-button>
+  <ion-button><ion-icon name="home"></ion-icon></ion-button>
+  <div class="line"></div>
+</div>
