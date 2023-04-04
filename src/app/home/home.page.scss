@@ -1,17 +1,18 @@
 #container {
   text-align: center;
   background-color: white;
-  border-radius: 0 0 100% 100% / 40%;
   height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  color: black;
 }
 
 #container strong {
   font-size: 20px;
   line-height: 26px;
 }
+
 
 #container p {
   font-size: 16px;
@@ -35,9 +36,32 @@
   height: 200px;
 }
 
-#arrow {
+.arrow {
   position: absolute;
   width: 100%;
   bottom: 0;
   margin: 20px 0;
+}
+
+.bounce {
+  animation: bounce 5s 4;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
 }
