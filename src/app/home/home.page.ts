@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
@@ -10,5 +11,7 @@ import { IonicModule } from '@ionic/angular';
   encapsulation: ViewEncapsulation.None
 })
 export class HomePage {
-  constructor() { }
+  constructor(private titleService: Title) {
+    this.titleService.setTitle('Daniel Barroso')
+  }
 }
