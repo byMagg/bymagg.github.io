@@ -1,17 +1,21 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, HostBinding, Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, ScrollDetail } from '@ionic/angular';
+import { ScrollLineComponent } from '../scroll-line/scroll-line.component';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule],
+  imports: [IonicModule, ScrollLineComponent],
   encapsulation: ViewEncapsulation.None
 })
 export class HomePage {
+
   constructor(private titleService: Title) {
     this.titleService.setTitle('Daniel Barroso')
   }
+
 }

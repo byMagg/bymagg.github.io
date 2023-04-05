@@ -1,4 +1,4 @@
-<ion-content [fullscreen]="true">
+<ion-content [scrollEvents]="true" (ionScroll)="scrollLine.onScroll($any($event))" [fullscreen]="true">
   <ion-header [translucent]="true" class="ion-no-border">
     <ion-toolbar>
       <ion-buttons slot="end">
@@ -26,11 +26,7 @@
       <ion-icon name="chevron-down" size="large" color="primary"></ion-icon>
     </div>
   </div>
-
-  <div style="height: 1000px;">
-
-  </div>
-
+  <scroll-line #scrollLine></scroll-line>
 </ion-content>
 <div id="links">
   <a><ion-icon name="logo-github"></ion-icon></a>
