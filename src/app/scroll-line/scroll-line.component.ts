@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostBinding, ViewChild } from '@angular/core';
 import { IonicModule, ScrollDetail } from '@ionic/angular';
 
 @Component({
@@ -10,35 +10,17 @@ import { IonicModule, ScrollDetail } from '@ionic/angular';
 })
 export class ScrollLineComponent {
 
-  @ViewChild('svgLine') input: ElementRef<HTMLInputElement> | undefined;
   height = 0;
+
   constructor() { }
 
-  length = 300
-  dasharray = this.length
-  dashoffset = this.length
-
-  ngAfterViewInit() {
-    if (this.input) {
-      this.input.nativeElement.style.height = this.height.toString()
-      console.log(this.height)
-    }
-  }
-
   onScroll(ev: CustomEvent<ScrollDetail>) {
-
     console.log(this.height)
     console.log(ev.detail.currentY)
-    if (this.input) {
-      if (ev.detail.currentY > 500) {
-        this.height = ev.detail.currentY - 500
-        this.input.nativeElement.style.height = this.height + "px"
-        this.input.nativeElement.style.display = "block"
-        console.log(this.input.nativeElement.style.height)
-      } else if (ev.detail.currentY < 500) {
-        this.height = 0
-        this.input.nativeElement.style.display = "none"
-      }
+    if (ev.detail.currentY > 500) {
+      this.height = ev.detail.currentY - 500
+    } else if (ev.detail.currentY <= 500) {
+      this.height = 0
     }
   }
 
