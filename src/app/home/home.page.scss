@@ -52,7 +52,7 @@ a:hover {
 
 #container h3 {
   font-weight: 300;
-  line-height: 26px;
+  font-size: clamp(40px, 8vw, 45px);
 }
 
 #container p {
@@ -70,7 +70,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  margin: 0 50px;
+  margin: 0 15px;
 }
 
 .line {
@@ -110,5 +110,15 @@ a:hover {
 
   60% {
     transform: translateY(-15px);
+  }
+}
+
+@media (max-width: 768px) {
+  #main-text {
+    width: 75%;
+  }
+
+  #container p {
+    width: 100%;
   }
 }
