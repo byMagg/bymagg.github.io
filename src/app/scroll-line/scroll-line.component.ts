@@ -22,6 +22,8 @@ export class ScrollLineComponent {
       console.log(this.height)
     } else if (ev.detail.currentY <= 500) {
       this.height = 0
+    } else {
+      this.height = 500
     }
   }
 

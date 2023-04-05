@@ -24,7 +24,7 @@ ion-header ion-buttons {
 }
 
 a {
-  color: white;
+  color: rgb(124, 205, 255);
 }
 
 a:hover {
@@ -34,6 +34,7 @@ a:hover {
 #main-text {
   width: 50%;
 }
+
 
 .big-heading {
   font-size: clamp(40px, 8vw, 80px);
@@ -46,6 +47,7 @@ a:hover {
 
 #container h2 {
   font-weight: 600;
+  color: rgb(124, 205, 255);
 }
 
 #container h3 {
@@ -73,7 +75,7 @@ a:hover {
 
 .line {
   height: 100px;
-  background-color: aliceblue;
+  background-color: rgb(124, 205, 255);
   width: 1px;
 }
 
@@ -85,6 +87,7 @@ a:hover {
   position: absolute;
   bottom: 0;
   margin: 20px;
+  color: rgb(124, 205, 255);
 }
 
 .bounce {

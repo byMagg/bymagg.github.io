@@ -7,12 +7,15 @@ svg {
 
 .line {
     height: 100px;
-    background-color: aliceblue;
+    background-color: rgb(124, 205, 255);
     width: 1px;
     margin: 0 auto;
 }
 
-ion-icon {
+img {
     position: relative;
     color: white;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
