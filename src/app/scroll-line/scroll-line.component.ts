@@ -1,5 +1,7 @@
 import { Component, ElementRef, HostBinding, ViewChild } from '@angular/core';
 import { IonicModule, ScrollDetail } from '@ionic/angular';
+import { debounceTime } from 'rxjs';
+import { setTimeout } from 'timers';
 
 @Component({
   selector: 'scroll-line',
@@ -15,10 +17,10 @@ export class ScrollLineComponent {
   constructor() { }
 
   onScroll(ev: CustomEvent<ScrollDetail>) {
-    console.log(this.height)
     console.log(ev.detail.currentY)
     if (ev.detail.currentY > 500) {
-      this.height = ev.detail.currentY - 500
+      this.height = Math.round(100 * (ev.detail.currentY - 500)) / 100
+      console.log(this.height)
     } else if (ev.detail.currentY <= 500) {
       this.height = 0
     }
