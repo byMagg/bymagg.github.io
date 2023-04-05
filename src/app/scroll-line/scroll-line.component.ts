@@ -11,6 +11,7 @@ import { IonicModule, ScrollDetail } from '@ionic/angular';
 export class ScrollLineComponent {
 
   @ViewChild('svgLine') input: ElementRef<HTMLInputElement> | undefined;
+  height = 0;
   constructor() { }
 
   length = 300
@@ -19,24 +20,25 @@ export class ScrollLineComponent {
 
   ngAfterViewInit() {
     if (this.input) {
-      this.input.nativeElement.style.strokeDasharray = this.dasharray.toString();
-      this.input.nativeElement.style.strokeDashoffset = this.dashoffset.toString();
-      console.log(this.dasharray)
-      console.log(this.dashoffset)
+      this.input.nativeElement.style.height = this.height.toString()
+      console.log(this.height)
     }
   }
 
   onScroll(ev: CustomEvent<ScrollDetail>) {
+
+    console.log(this.height)
+    console.log(ev.detail.currentY)
     if (this.input) {
-      if (this.dashoffset > 0 && ev.detail.deltaY > 0 || this.dashoffset < this.length && ev.detail.deltaY < 0) {
-        this.dashoffset -= ev.detail.deltaY / 10
+      if (ev.detail.currentY > 500) {
+        this.height = ev.detail.currentY - 500
+        this.input.nativeElement.style.height = this.height + "px"
+        this.input.nativeElement.style.display = "block"
+        console.log(this.input.nativeElement.style.height)
+      } else if (ev.detail.currentY < 500) {
+        this.height = 0
+        this.input.nativeElement.style.display = "none"
       }
-
-      if (this.dashoffset < 0) this.dashoffset = 0
-      if (this.dashoffset > this.length) this.dashoffset = this.length
-
-      this.input.nativeElement.style.strokeDashoffset = this.dashoffset.toString();
-      console.log(this.input.nativeElement.style.strokeDashoffset)
     }
   }
 
