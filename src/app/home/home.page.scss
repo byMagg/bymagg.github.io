@@ -1,3 +1,7 @@
+body {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+}
+
 #container {
   height: 100%;
   display: flex;
@@ -31,8 +35,21 @@ a:hover {
   width: 50%;
 }
 
+.big-heading {
+  font-size: clamp(40px, 8vw, 80px);
+}
+
+#container h1 {
+  font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+  font-weight: 400;
+}
+
+#container h2 {
+  font-weight: 600;
+}
+
 #container h3 {
-  font-size: 20px;
+  font-weight: 300;
   line-height: 26px;
 }
 
@@ -41,11 +58,7 @@ a:hover {
   line-height: 22px;
   color: #8c8c8c;
   margin: 0;
-}
-
-#name {
-  font-weight: 700;
-  font-size: xx-large;
+  width: 70%;
 }
 
 #links {
@@ -57,8 +70,6 @@ a:hover {
   gap: 40px;
   margin: 0 50px;
 }
-
-
 
 .line {
   height: 100px;
@@ -93,38 +104,4 @@ a:hover {
   60% {
     transform: translateY(-15px);
   }
-}
-
-/* width */
-
-/* set the width of the scrollbar */
-
-::-webkit-scrollbar {
-
-  width: 10px;
-
-}
-
-/* Let's get this party started */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: rgba(255, 0, 0, 0.8);
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-}
-
-::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(255, 0, 0, 0.4);
 }
