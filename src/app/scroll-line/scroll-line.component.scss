@@ -3,9 +3,9 @@
     background-color: var(--primary-color);
     width: 1px;
     margin: 0 auto;
-    -webkit-transform-origin: top;
-    -ms-transform-origin: top;
-    transform-origin: top;
+    -webkit-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom;
     position: fixed;
     bottom: 67%;
 }
