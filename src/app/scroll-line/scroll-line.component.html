@@ -1,5 +1,6 @@
 <div style="height: 1000px; margin: 0 auto; width: 150px; display: flex; flex-direction: column; align-items: center;">
     <div [style.transform]="'scaleY(' + height + ')'" #svgLine class="line">
     </div>
-    <img src="../../assets/user.jpeg" />
+    <img [style.position]="display ? 'fixed' : 'relative'" [style.bottom]="display ? '50%' : '0'"
+        [style.display]="display" src="../../assets/user.jpeg" />
 </div>

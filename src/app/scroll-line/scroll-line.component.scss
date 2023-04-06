@@ -6,13 +6,16 @@
     -webkit-transform-origin: top;
     -ms-transform-origin: top;
     transform-origin: top;
+    position: fixed;
+    bottom: 67%;
 }
 
 img {
-    position: relative;
+    position: absolute;
     color: white;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 3px solid var(--primary-color);
+    bottom: 50%;
 }
