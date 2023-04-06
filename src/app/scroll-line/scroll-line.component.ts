@@ -20,11 +20,12 @@ export class ScrollLineComponent {
 
   onScroll(ev: CustomEvent<ScrollDetail>) {
     console.log(ev.detail.currentY)
-    if (ev.detail.currentY > this.maxHeight) {
-      this.height = (ev.detail.currentY - this.maxHeight) / this.scrollInitialPosition
+    if (ev.detail.currentY > this.scrollInitialPosition) {
+      console.log(document.documentElement.clientHeight)
+      this.height = (ev.detail.currentY - this.scrollInitialPosition) / this.maxHeight
       this.display = true
       console.log(this.height)
-    } else if (ev.detail.currentY <= this.maxHeight) {
+    } else if (ev.detail.currentY <= this.scrollInitialPosition) {
       this.height = 0
       this.display = false
     } else {

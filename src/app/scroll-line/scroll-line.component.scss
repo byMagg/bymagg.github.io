@@ -7,7 +7,7 @@
     -ms-transform-origin: bottom;
     transform-origin: bottom;
     position: fixed;
-    bottom: 67%;
+    bottom: 66%;
 }
 
 img {
@@ -18,4 +18,24 @@ img {
     border-radius: 50%;
     border: 3px solid var(--primary-color);
     bottom: 50%;
+}
+
+.container {
+    position: relative;
+    height: 1000px;
+    margin: 0 auto;
+    // width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dotted-line {
+    height: 500px;
+}
+
+.dotted-line:after {
+    background: repeating-linear-gradient(to right, rgba(0, 0, 0, 0.5) 0,
+            rgba(0, 0, 0, 0.5) 1px, rgba(255, 255, 255, 0) 1px,
+            rgba(255, 255, 255, 0) 2px);
 }
