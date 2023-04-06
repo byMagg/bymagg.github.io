@@ -24,7 +24,7 @@ ion-header ion-buttons {
 }
 
 a {
-  color: rgb(124, 205, 255);
+  color: var(--primary-color);
 }
 
 a:hover {
@@ -47,7 +47,7 @@ a:hover {
 
 #container h2 {
   font-weight: 600;
-  color: rgb(124, 205, 255);
+  color: var(--primary-color);
 }
 
 #container h3 {
@@ -70,12 +70,12 @@ a:hover {
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  margin: 0 15px;
+  margin: 0 40px;
 }
 
 .line {
   height: 100px;
-  background-color: rgb(124, 205, 255);
+  background-color: var(--primary-color);
   width: 1px;
 }
 
@@ -87,7 +87,7 @@ a:hover {
   position: absolute;
   bottom: 0;
   margin: 20px;
-  color: rgb(124, 205, 255);
+  color: var(--primary-color);
 }
 
 .bounce {
@@ -129,6 +129,10 @@ a:hover {
     z-index: 11;
     display: block;
     height: 50px;
+  }
+
+  #links {
+    margin: 0 15px;
   }
 
   ion-menu>ion-content>div {
