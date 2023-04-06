@@ -94,6 +94,12 @@ a:hover {
   animation: bounce 5s 4;
 }
 
+
+#main-content {
+  display: none;
+}
+
+
 @keyframes bounce {
 
   0%,
@@ -116,6 +122,25 @@ a:hover {
 @media (max-width: 768px) {
   #main-text {
     width: 75%;
+  }
+
+  #main-content {
+    position: absolute;
+    z-index: 11;
+    display: block;
+    height: 50px;
+  }
+
+  ion-menu>ion-content>div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .default-header {
+    display: none;
   }
 
   #container p {

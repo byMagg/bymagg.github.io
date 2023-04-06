@@ -1,7 +1,14 @@
 <ion-content [scrollEvents]="true" (ionScroll)="scrollLine.onScroll($any($event))" [fullscreen]="true">
-  <ion-header mode="md" class="ion-no-border">
-    <ion-toolbar>
-      <ion-buttons slot="end">
+  <ion-menu side="end" class="mobile-header ion-no-border" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-button>CERRAR</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <div>
         <a>
           1. About
         </a>
@@ -10,6 +17,30 @@
         </a>
         <a>
           3. Contact
+        </a>
+      </div>
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+  <ion-header mode="md" class="default-header ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <a>
+          01. About
+        </a>
+        <a>
+          02. Experience
+        </a>
+        <a>
+          03. Contact
         </a>
       </ion-buttons>
     </ion-toolbar>
