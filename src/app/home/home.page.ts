@@ -14,6 +14,9 @@ import { ScrollLineComponent } from '../scroll-line/scroll-line.component';
 })
 export class HomePage {
 
+  lineHeight: number = 500;
+  lineInitialPosition: number = 500;
+
   constructor(private titleService: Title) {
     this.titleService.setTitle('Daniel Barroso')
   }
