@@ -1,6 +1,6 @@
 <ion-content [scrollEvents]="true" (ionScroll)="scrollLine.onScroll($any($event))" [fullscreen]="true">
   <ion-menu side="end" class="mobile-header ion-no-border" contentId="main-content">
-    <ion-header>
+    <ion-header mode="md">
       <ion-toolbar>
         <ion-buttons slot="end">
           <ion-button>CERRAR</ion-button>
@@ -22,7 +22,7 @@
     </ion-content>
   </ion-menu>
   <div class="ion-page" id="main-content">
-    <ion-header>
+    <ion-header mode="md">
       <ion-toolbar>
         <ion-buttons slot="end">
           <ion-menu-button></ion-menu-button>
@@ -61,7 +61,7 @@
       <ion-icon name="chevron-down" size="large"></ion-icon>
     </div>
   </div>
-  <scroll-line [maxHeight]="lineHeight" [scrollInitialPosition]="lineInitialPosition" #scrollLine></scroll-line>
+  <scroll-line [maxHeight]="lineHeight" #scrollLine></scroll-line>
 </ion-content>
 <div id="links">
   <a><ion-icon name="logo-github"></ion-icon></a>

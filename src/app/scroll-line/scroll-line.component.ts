@@ -12,7 +12,6 @@ import { IonicModule, ScrollDetail } from '@ionic/angular';
 export class ScrollLineComponent {
 
   @Input() maxHeight: number = 500;
-  @Input() scrollInitialPosition: number = 500
   height: number = 0
   display: boolean = false;
 
@@ -20,12 +19,14 @@ export class ScrollLineComponent {
 
   onScroll(ev: CustomEvent<ScrollDetail>) {
     console.log(ev.detail.currentY)
-    if (ev.detail.currentY > this.scrollInitialPosition) {
-      console.log(document.documentElement.clientHeight)
-      this.height = (ev.detail.currentY - this.scrollInitialPosition) / this.maxHeight
+    const scrollInitialPosition = (document.documentElement.clientHeight / 2) + 150
+    if (ev.detail.currentY > scrollInitialPosition) {
+      console.log(document.documentElement.clientHeight / 2)
+      console.log(scrollInitialPosition)
+      this.height = (ev.detail.currentY - scrollInitialPosition) / this.maxHeight
       this.display = true
       console.log(this.height)
-    } else if (ev.detail.currentY <= this.scrollInitialPosition) {
+    } else if (ev.detail.currentY <= scrollInitialPosition) {
       this.height = 0
       this.display = false
     } else {

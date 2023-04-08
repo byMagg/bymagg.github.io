@@ -1,13 +1,13 @@
 .line {
     height: 500px;
     background-color: var(--primary-color);
-    width: 1px;
+    width: 4px;
     margin: 0 auto;
     -webkit-transform-origin: bottom;
     -ms-transform-origin: bottom;
     transform-origin: bottom;
     position: fixed;
-    bottom: 66%;
+    top: 0;
 }
 
 img {
@@ -16,7 +16,8 @@ img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 3px solid var(--primary-color);
+    padding: 4px;
+    border: 4px solid var(--primary-color);
     bottom: 50%;
 }
 
