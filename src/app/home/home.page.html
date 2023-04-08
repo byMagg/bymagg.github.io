@@ -61,10 +61,45 @@
       <ion-icon name="chevron-down" size="large"></ion-icon>
     </div>
   </div>
-  <scroll-line [maxHeight]="lineHeight" #scrollLine></scroll-line>
+  <div id="projects">
+    <div id="left-projects" class="flex-center-column project-column">
+      <img class="project-item" src="../../assets/project1.png" />
+      <ion-card class="project-item">
+        <ion-card-header>
+          <ion-card-title>Card Title</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <scroll-line [maxHeight]="lineHeight" #scrollLine></scroll-line>
+    <div id="right-projects" class="flex-center-column project-column">
+      <ion-card class="project-item">
+        <ion-card-header>
+          <ion-card-title>Card Title</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+      <img class="project-item" alt="" src="../../assets/project1.png" />
+    </div>
+  </div>
+  <div style="height: 1000px;"></div>
+  <ion-footer collapse="fade">
+    <ion-toolbar>
+      <ion-title>Footer</ion-title>
+    </ion-toolbar>
+  </ion-footer>
 </ion-content>
+
 <div id="links">
-  <a><ion-icon name="logo-github"></ion-icon></a>
-  <a><ion-icon name="logo-linkedin"></ion-icon></a>
+  <a href="https://github.com/byMagg/"><ion-icon name="logo-github"></ion-icon></a>
+  <a href="https://www.linkedin.com/in/daniel-barroso-urrutia/"><ion-icon name="logo-linkedin"></ion-icon></a>
   <div class="line"></div>
 </div>

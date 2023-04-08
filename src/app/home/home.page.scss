@@ -13,6 +13,21 @@ body {
   margin: 0 auto;
 }
 
+.flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-column {
+  margin-top: 100px;
+  gap: 300px;
+}
+
+.project-column ion-card {
+  background-color: var(--background-light-color);
+}
+
 ion-header {
   position: absolute;
 }
@@ -79,8 +94,22 @@ a:hover {
   width: 1px;
 }
 
-.projects {
-  height: 1000px;
+#projects {
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+}
+
+.project-item {
+  height: 200px;
+  width: 400px;
+}
+
+#left-projects {
+  align-items: end;
+}
+
+#right-projects {
+  align-items: start;
 }
 
 .arrow {
