@@ -10,6 +10,36 @@
     bottom: 67%;
 }
 
+.up-relative img {
+    position: relative;
+    bottom: 0;
+}
+
+.fixed img {
+    position: fixed;
+    bottom: 50%;
+}
+
+.down-relative img {
+    position: relative;
+    bottom: 0;
+}
+
+.up-relative div {
+    position: fixed;
+    bottom: 0;
+}
+
+.fixed div {
+    position: fixed;
+    bottom: 67%;
+}
+
+.down-relative div {
+    position: relative;
+    bottom: 0;
+}
+
 img {
     position: absolute;
     color: white;
@@ -34,7 +64,8 @@ img {
 .container>div {
     position: absolute;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .dotted-line {

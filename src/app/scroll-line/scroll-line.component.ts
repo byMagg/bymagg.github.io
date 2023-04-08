@@ -13,25 +13,25 @@ export class ScrollLineComponent {
 
   @Input() maxHeight: number = 500;
   height: number = 0
-  display: boolean = false;
+  className: string = "up-relative"
 
   constructor() { }
 
   onScroll(ev: CustomEvent<ScrollDetail>) {
     console.log(ev.detail.currentY)
     const scrollInitialPosition = (document.documentElement.clientHeight / 2) + 150
-    if (ev.detail.currentY > scrollInitialPosition) {
+    if (ev.detail.currentY > scrollInitialPosition && ev.detail.currentY < 1100) {
       console.log(document.documentElement.clientHeight / 2)
       console.log(scrollInitialPosition)
       this.height = (ev.detail.currentY - scrollInitialPosition) / this.maxHeight
-      this.display = true
+      this.className = "fixed"
       console.log(this.height)
     } else if (ev.detail.currentY <= scrollInitialPosition) {
       this.height = 0
-      this.display = false
+      this.className = "up-relative"
     } else {
-      this.display = true
-      this.height = this.maxHeight
+      this.height = 1
+      this.className = "down-relative"
     }
   }
 
