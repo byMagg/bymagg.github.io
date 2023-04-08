@@ -7,7 +7,7 @@
     -ms-transform-origin: bottom;
     transform-origin: bottom;
     position: fixed;
-    top: 0;
+    bottom: 67%;
 }
 
 img {
@@ -29,6 +29,12 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.container>div {
+    position: absolute;
+    display: flex;
+    justify-content: center;
 }
 
 .dotted-line {
